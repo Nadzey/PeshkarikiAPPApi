@@ -1,0 +1,5314 @@
+{
+	"info": {
+		"_postman_id": "0f574ae5-8713-41e1-abe2-fb78a439de83",
+		"name": "peshkariki api app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AuthUserType1",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e7b5ee64-e774-4502-a47f-cc5add04c40d",
+								"exec": [
+									"const response = JSON.parse(pm.response.text());\r",
+									"const id = response.user.id\r",
+									"\r",
+									"// Установка переменной \"id\"\r",
+									"pm.environment.set(\"idAppUser1\", id)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "05130137-fa5d-4df4-a57e-0572cce084b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "User[pass]",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "User[type]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "User[phone]",
+									"value": "{{loginAppUser1}}",
+									"type": "text"
+								},
+								{
+									"key": "User[regchecklic]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "User[city]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "User[avatar]",
+									"description": "[не обязательное поле]",
+									"type": "file",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "UserDevice[platform]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "UserDevice[versionOS]",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "UserDevice[brand]",
+									"value": "Apple",
+									"type": "text"
+								},
+								{
+									"key": "UserDevice[versionApp]",
+									"value": "15.3",
+									"type": "text"
+								},
+								{
+									"key": "User[repeat]",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/register",
+						"description": "Регистрация"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9da12eff-d719-4a6e-83b6-f79ac3de8b9d",
+								"exec": [
+									"const response = JSON.parse(pm.response.text());",
+									"const token = response.token;",
+									"",
+									"// Установка переменной \"token\"",
+									"pm.environment.set(\"tokenAPPUser1\", token);",
+									"",
+									"",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "3f223dc4-7b75-4fad-a8eb-b32eca9094ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "LoginForm[username]",
+									"value": "{{loginAppUser1}}",
+									"type": "text"
+								},
+								{
+									"key": "LoginForm[password]",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "loginFrontEnd",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9da12eff-d719-4a6e-83b6-f79ac3de8b9d",
+								"exec": [
+									"const response = JSON.parse(pm.response.text());",
+									"const token = response.token;",
+									"",
+									"// Установка переменной \"token\"",
+									"pm.environment.set(\"tokenAPPUser1\", token);",
+									"",
+									"",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "b3510a90-a095-49ff-a367-be2a18d991cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "LoginForm[username]",
+									"value": "{{loginAppUser2}}",
+									"type": "text"
+								},
+								{
+									"key": "LoginForm[password]",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "{{peshkarikiAPI}}//eApis/frontend/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "ConfirmNumber",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a2b27eb0-2b8e-4f11-a947-d97ed6f6e4b2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "f0196fb1-4988-4310-936f-bde1a3db8ee0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPPUser1}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "1698",
+									"description": "[не обязательное поле]",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/ConfirmNumber",
+						"description": "Регистрация"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "737ba56f-63b6-426b-96c8-e49c84de032a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "dac2caaa-2732-42cc-aca5-10d6d8703d70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPPUser1}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/logout",
+						"description": "Закрыть токен"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "33580682-e61a-4c34-b049-c3be8601e8d0"
+		},
+		{
+			"name": "AuthUserType2",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e7b5ee64-e774-4502-a47f-cc5add04c40d",
+								"exec": [
+									"const response = JSON.parse(pm.response.text());\r",
+									"const id = response.user.id\r",
+									"\r",
+									"// Установка переменной \"id\"\r",
+									"pm.environment.set(\"idApp\", id)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "56cc1c31-3f1d-4223-98b1-5255ff6f95bb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "User[pass]",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "User[type]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "User[phone]",
+									"value": "{{loginApp}}",
+									"type": "text"
+								},
+								{
+									"key": "User[regchecklic]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "User[city]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "User[avatar]",
+									"description": "[не обязательное поле]",
+									"type": "file",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "UserDevice[platform]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "UserDevice[versionOS]",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "UserDevice[brand]",
+									"value": "Apple",
+									"type": "text"
+								},
+								{
+									"key": "UserDevice[versionApp]",
+									"value": "15.3",
+									"type": "text"
+								},
+								{
+									"key": "User[repeat]",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/register",
+						"description": "Регистрация"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9da12eff-d719-4a6e-83b6-f79ac3de8b9d",
+								"exec": [
+									"const response = JSON.parse(pm.response.text());",
+									"const token = response.token;",
+									"",
+									"// Установка переменной \"token\"",
+									"pm.environment.set(\"tokenAPP2\", token);",
+									"",
+									"",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "2b56c05f-1e2a-4dbc-8a8b-53bcefbdccd7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "LoginForm[username]",
+									"value": "{{loginAppUser2}}",
+									"type": "text"
+								},
+								{
+									"key": "LoginForm[password]",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "ConfirmNumber",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a2b27eb0-2b8e-4f11-a947-d97ed6f6e4b2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "8ab12d12-b239-46a3-8ba3-78f29bc7f20e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "0493",
+									"description": "[не обязательное поле]",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/ConfirmNumber",
+						"description": "Регистрация"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "737ba56f-63b6-426b-96c8-e49c84de032a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e32c1207-27f1-49a0-891e-46f49809c194",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/auth/logout",
+						"description": "Закрыть токен"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "b33cd4ca-1c37-46a9-8d50-55e6d74b0294"
+		},
+		{
+			"name": "OrderForm",
+			"item": [
+				{
+					"name": "createOrder",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b8b4b2b0-2d26-40de-89cb-8d68708e2f4d",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "7e111282-bc53-4dd9-bb17-3e9b6c9d204d",
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"const orderId = jsonData.orderId;\r",
+									"\r",
+									"pm.environment.set(\"orderIdApp\", orderId);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "b3bd190a-6cb3-45fa-9dab-58d45f1daff8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order[OrderId]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][formVersion]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][favorite_couriers]",
+									"value": "[\"33377656\"]",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][favorite_enable]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type_pay]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][with_buyout]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewalletType]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewallet]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][shop_name]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][shop_inner_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][promo_code]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][comment]",
+									"value": "Заказ",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][courier_addition]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][servicesArray][0]",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][template_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bank_card_id]",
+									"value": "2034",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bank_card_type]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][id_type_auto]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][current_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_city]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_street]",
+									"value": "{{address_street1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_building]",
+									"value": "{{address_building1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_storey]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_entrance]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_apartments]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lat]",
+									"value": "55.73234",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lng]",
+									"value": "37.67218",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][right_formatted_address]",
+									"value": "{{right_formatted_address1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][target]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][phone]",
+									"value": "{{phone1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][name]",
+									"value": "{{name1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateFrom]",
+									"value": "{{dateFrom1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateTo]",
+									"value": "{{dateTo1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][current_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_city]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_street]",
+									"value": "{{address_street2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_building]",
+									"value": "{{address_building2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_storey]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_entrance]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_apartments]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lat]",
+									"value": "55.752992",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lng]",
+									"value": "37.612677",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][right_formatted_address]",
+									"value": "{{right_formatted_address2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][target]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][phone]",
+									"value": "{{phone2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][name]",
+									"value": "{{name2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateFrom]",
+									"value": "{{dateFrom2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateTo]",
+									"value": "{{dateTo2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][return_dot]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][name]",
+									"value": "воообще похую",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][weight]",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][quant]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][price]",
+									"value": "100",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/CreateOrder"
+					},
+					"response": []
+				},
+				{
+					"name": "getCheckPrint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ffcaf9e2-f902-4716-b5ab-a6d7a7039358",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "82252744-9aa5-494b-99d2-4200aabf44fe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order[OrderId]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][formVersion]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][favorite_couriers]",
+									"value": "[\"33377656\"]",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][favorite_enable]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type_pay]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewalletType]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewallet]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][shop_name]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][shop_inner_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][promo_code]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][courier_addition]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][servicesArray][0]",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][template_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bank_card_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bank_card_type]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][id_type_auto]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][current_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_city]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_street]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_building]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_storey]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_entrance]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_apartments]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lat]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lng]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][right_formatted_address]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][target]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][phone]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][name]",
+									"value": "{{name1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateFrom]",
+									"value": "{{dateFrom1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateTo]",
+									"value": "{{dateTo1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][current_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_city]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][distance_from_metro]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_street]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_building]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_storey]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_entrance]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_apartments]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lat]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lng]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][right_formatted_address]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][target]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][phone]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][name]",
+									"value": "{{name2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateFrom]",
+									"value": "{{dateFrom2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateTo]",
+									"value": "{{dateTo2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][return_dot]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][name]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][weight]",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][quant]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][price]",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetCheckPrint"
+					},
+					"response": []
+				},
+				{
+					"name": "getProps",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f345fa24-2084-495a-a807-fc0846e5657e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "674ff553-3581-4dac-91d9-c419a8890b9b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "{{orderIdApp}}",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetProps"
+					},
+					"response": []
+				},
+				{
+					"name": "checkPromo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5ad86176-d3f2-4002-ac69-0a00df088626",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "1375ae4c-7a5a-4152-9423-31bd73cb4345",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "promocode",
+									"value": "{{promocode}}",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/CheckPromo"
+					},
+					"response": []
+				},
+				{
+					"name": "getAdresByCoord",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d70633a1-fb88-4379-a220-69f777f86535",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "a6e28ade-3b67-455c-a642-f5333b562779",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "lat",
+									"value": "55.820501",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "37.585485",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": {
+							"raw": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetAdresByCoord",
+							"host": [
+								"{{peshkarikiAPI}}"
+							],
+							"path": [
+								"eApis",
+								"app",
+								"OrderForm",
+								"GetAdresByCoord"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddress",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "71c8a4de-80aa-4ac0-bf98-7c13e9c1f011",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "8ab0102d-6c92-4ae8-9b98-7f6358295d1f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "str_data",
+									"value": "г Санкт-Петербург, Невск",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "2",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetAddress"
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8b5bcf57-4de9-48f4-863a-c3fd74dbe4e0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "950b9616-2ed5-48b7-9c81-78338be68171",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order[Dots][0][address_street]",
+									"value": "{{right_formatted_address1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][items][0][price]",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][lng]",
+									"value": "37.64",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][lat]",
+									"value": "55.76",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][price]",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][distance_from_metro]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][city_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][courier_addition]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][distance_from_metro]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][items][0][name]",
+									"value": "Цветы",
+									"type": "text"
+								},
+								{
+									"key": "order[orderId]",
+									"value": "{{orderIdApp}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_street]",
+									"value": "{{right_formatted_address1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateFrom]",
+									"value": "{{dateFrom1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][target]",
+									"value": "Новый комментарий",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][phone]",
+									"value": "{{phone1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][phone]",
+									"value": "+7(967)616-16-49",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lat]",
+									"value": "55.76",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][name]",
+									"value": "Получатель №1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][servicesArray][1]",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][target]\"",
+									"value": "ком",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type_pay]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][user]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][address_street]",
+									"value": "{{address_streetNew}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][distance_from_metro]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][dateFrom]",
+									"value": "{{dateFrom1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][quant]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][name]",
+									"value": "Алексей",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][servicesArray][0]",
+									"value": "39",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][name]",
+									"value": "Документы",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][dateTo]",
+									"value": "{{dateTo3}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][id_type_auto]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][city_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lng]",
+									"value": "37.64",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][city_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateTo]",
+									"value": "{{dateTo1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][phone]",
+									"value": "{{phone2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lat]",
+									"value": "55.76",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][name]",
+									"value": "Андрей",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lng]",
+									"value": "37.64",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewalletType]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateFrom]",
+									"value": "{{dateFrom2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateTo]",
+									"value": "{{dateTo2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][items][0][quant]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][comment]",
+									"value": "Заказ",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][formVersion]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][2][items][0][weight]",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][weight]",
+									"value": "1000",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/Edit"
+					},
+					"response": []
+				},
+				{
+					"name": "SendRegistryCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "56ff85fb-94fa-4640-8579-4eb012d36a6f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "bffb0b06-3987-4cd2-a62d-6a205aef269c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "{{phoneAnonimUser}}",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/SendRegistryCode"
+					},
+					"response": []
+				},
+				{
+					"name": "СonfirmRegistryCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ed6c4448-6ee5-490d-a771-a6c2d3cf1741",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e261d2cb-a4f1-4321-bfc7-0923b3d9c395",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "{{phoneAnonimUser}}",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "35553",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/СonfirmRegistryCode"
+					},
+					"response": []
+				},
+				{
+					"name": "CheckValidate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3f3b7f23-50d2-47d5-9242-f5a82b7fb69a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "584bcbfa-031c-4362-b4f7-c17714aa01e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order[Order][orderId]",
+									"value": "{{orderIdApp}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][formVersion]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][user]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][fix_tariff_on_edit]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][fix_next_day_price]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][favorite_couriers]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][favorite_enable]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][isPublic]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bonus_payment]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][who_pay]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][type]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][with_buyout]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][pack]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewalletType]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][ewallet]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][shop_name]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][shop_inner_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][clearing]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][promo_code]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][comment]",
+									"value": "Заказ",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][courier_addition]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][servicesArray][0]",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][template_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][createdViaApp]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bank_card_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][bank_card_type]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][return_cash]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Order][id_type_auto]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][cheque_created]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][current_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_city]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][distance_from_metro]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_street]",
+									"value": "{{address_street1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_building]",
+									"value": "{{address_building1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][address_apartments]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lat]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][lng]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][metro_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][right_formatted_address]",
+									"value": "{{right_formatted_address1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][target]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][phone]",
+									"value": "{{phone1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][name]",
+									"value": "{{name1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateFrom]",
+									"value": "{{dateFrom1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][dateTo]",
+									"value": "{{dateTo1}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][payment_dot]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][0][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][cheque_created]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][current_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][cash]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_city]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][prigorod]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][distance_from_metro]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_street]",
+									"value": "{{address_street2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_building]",
+									"value": "{{address_building2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][address_apartments]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lat]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][lng]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][metro_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][metro_not_found]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][right_formatted_address]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][target]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][phone]",
+									"value": "{{phone2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][name]",
+									"value": "Получатель №1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateFrom]",
+									"value": "{{dateFrom2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][dateTo]",
+									"value": "{{dateTo2}}",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][return_dot]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][payment_dot]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][shop_delivery]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][name]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][weight]",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][quant]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "order[Dots][1][items][0][price]",
+									"value": "10000",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/CheckValidate"
+					},
+					"response": []
+				},
+				{
+					"name": "SberbankPay",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3d442e44-980d-4681-8ef6-7bcbf0afe0ca",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"response_true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.success).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "88bc63f7-0058-4937-8f4c-3bf63ccad710",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPP2}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "action",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "bindingCardToService",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sum",
+									"value": "1000",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/SberbankPay"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "dad88e79-990f-4029-b235-b277a5ad8905"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "only_shop",
+					"item": [
+						{
+							"name": "ShopAddOrderPageWeb",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"response_true\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.success).to.eql(true);",
+											"});"
+										],
+										"type": "text/javascript",
+										"id": "46c7c825-778f-4a62-938f-eef2e2aac613"
+									}
+								}
+							],
+							"_postman_id": "58527d80-c19d-466b-bbf2-d4c0c8507cc3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "coords[lat]",
+											"value": "30.3",
+											"type": "text"
+										},
+										{
+											"key": "coords[lng]",
+											"value": "",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/ShopAddOrderPageWeb"
+							},
+							"response": []
+						},
+						{
+							"name": "shopCancelOrder",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"response_true\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.success).to.eql(true);",
+											"});"
+										],
+										"type": "text/javascript",
+										"id": "a0985140-739f-4ba8-9555-79179f462239"
+									}
+								}
+							],
+							"_postman_id": "f93e480c-a071-47e2-ae98-ca733eb123bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2065959",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/ShopCancelOrder",
+								"description": "Курьер отказывается от заказа"
+							},
+							"response": []
+						},
+						{
+							"name": "AddCourierToFavorites",
+							"_postman_id": "98631a57-37dc-49e8-ba58-e0e018f2684b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2328979",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "ывввввввввввввввввввввввввввввввввввв",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/AddCourierToFavorites"
+							},
+							"response": []
+						},
+						{
+							"name": "RemoveCourierFromFavorites",
+							"_postman_id": "402d686c-ab8b-4872-8a87-6f1880554d57",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "33378500",
+											"type": "text"
+										},
+										{
+											"key": "oid",
+											"value": "2331172",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/RemoveCourierFromFavorites"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdditionOrderPrice",
+							"_postman_id": "28b583b6-0c67-4717-93ce-694e4a8861b4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "4256037",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/GetAdditionOrderPrice"
+							},
+							"response": []
+						},
+						{
+							"name": "SetAdditionOrderPrice",
+							"_postman_id": "a595b35d-18ab-41b3-a35b-6a5668555b9b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "2330544",
+											"type": "text"
+										},
+										{
+											"key": "selected_price_key",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "input_price",
+											"value": "300",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/SetAdditionOrderPrice"
+							},
+							"response": []
+						},
+						{
+							"name": "ShopEditOrderPageWeb",
+							"_postman_id": "1faa2d7b-a52d-400c-a54c-5641362ffc72",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2330544",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/ShopEditOrderPageWeb"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "26d2b4df-98d9-471d-aacc-0445c764a497",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "only_courier",
+					"item": [
+						{
+							"name": "availableOrders",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"response_true\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.success).to.eql(true);",
+											"});"
+										],
+										"type": "text/javascript",
+										"id": "2f5c947c-109f-4abc-bd9f-e436262d626c"
+									}
+								}
+							],
+							"_postman_id": "d6960479-ef6e-4409-9020-7fb83dcb9333",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "coords[lat]",
+											"value": "30.3",
+											"type": "text"
+										},
+										{
+											"key": "coords[lng]",
+											"value": "",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/AvailableOrders"
+							},
+							"response": []
+						},
+						{
+							"name": "take",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"response_true\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.success).to.eql(true);",
+											"});"
+										],
+										"type": "text/javascript",
+										"id": "a670eb9a-6ca5-4f0b-b744-52622427814d"
+									}
+								}
+							],
+							"_postman_id": "c0ac2445-8a97-427c-8b3f-41c592e17009",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2332868",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/take"
+							},
+							"response": []
+						},
+						{
+							"name": "CancelOrder",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"response_true\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.success).to.eql(true);",
+											"});"
+										],
+										"type": "text/javascript",
+										"id": "95e134ad-637f-45c2-b96a-16cac3eea1e5"
+									}
+								}
+							],
+							"_postman_id": "b1d5e0a1-95bb-492c-9cf7-0e153a33dac7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2330413",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/CancelOrder",
+								"description": "Курьер отказывается от заказа"
+							},
+							"response": []
+						},
+						{
+							"name": "confirmFinishCode",
+							"_postman_id": "85b94bfc-77e2-48f4-b2d1-6f9b746c965b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2333186 ",
+											"description": "ид заказа",
+											"type": "text"
+										},
+										{
+											"key": "did",
+											"value": "4262526",
+											"description": "ид точки",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "924",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/ConfirmFinishCode",
+								"description": "активация кода автозавершения"
+							},
+							"response": []
+						},
+						{
+							"name": "setErrorInOrder",
+							"_postman_id": "f1f4a9ea-ba4a-4c60-a964-88ff5f9df35f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/SetErrorInOrder"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAvailableStatusForDot",
+							"_postman_id": "91b4df79-7472-40ff-ba06-fae0ab4c0ec8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "did",
+											"value": "4251297",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": {
+									"raw": "{{peshkariki1}}/eApis/app/order/GetAvailableStatusForDot",
+									"host": [
+										"{{peshkariki1}}"
+									],
+									"path": [
+										"eApis",
+										"app",
+										"order",
+										"GetAvailableStatusForDot"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CourierSetTimeWait",
+							"_postman_id": "f6d160f1-bff6-4010-a8c9-2a53d8d56d1b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "did",
+											"value": "4251296",
+											"type": "text"
+										},
+										{
+											"key": "time",
+											"value": "15",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/CourierSetTimeWait"
+							},
+							"response": []
+						},
+						{
+							"name": "ChangeDotStatus",
+							"_postman_id": "03eea071-90a7-4584-acc4-a9bef9b4573f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "did",
+											"value": "4265618",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "coords[lat]",
+											"value": "59.9355",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "coords[lng]",
+											"value": "30.3136",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/ChangeDotStatus"
+							},
+							"response": []
+						},
+						{
+							"name": "getInstruction",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"response_true\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.success).to.eql(true);",
+											"});"
+										],
+										"type": "text/javascript",
+										"id": "430d62c0-3d24-4d63-b4ea-b2615b2cc8e3"
+									}
+								}
+							],
+							"_postman_id": "711df13c-c450-4d8f-9f02-5b26ada941ff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2333804",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/GetInstruction"
+							},
+							"response": []
+						},
+						{
+							"name": "ReturnItems",
+							"_postman_id": "03ad8405-dca2-4407-8529-06d717508871",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oid",
+											"value": "2334008",
+											"type": "text"
+										},
+										{
+											"key": "items[32997]",
+											"value": "5",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/ReturnItems"
+							},
+							"response": []
+						},
+						{
+							"name": "CancelReturnDot",
+							"_postman_id": "e2296b30-44fb-4276-8203-c6d0c535c15b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "did",
+											"value": "4262044",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/CancelReturnDot"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateDotCheque",
+							"_postman_id": "b9dc88e0-bc13-4782-b072-df1c20efa5f0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "did",
+											"value": "4261594",
+											"type": "text"
+										}
+									],
+									"options": {}
+								},
+								"url": "{{peshkariki1}}/eApis/app/order/CreateDotCheque"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "dcaafc64-5274-4eb9-ac85-2c37f3488fe4",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "archiveOrder",
+					"_postman_id": "ee39dcf0-88ed-454b-89aa-2d06a68e3cf3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "2327426 ",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/archiveOrder"
+					},
+					"response": []
+				},
+				{
+					"name": "savePhoto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "26a8e829-c6ff-4123-9407-3705146f0087"
+							}
+						}
+					],
+					"_postman_id": "782abdbc-34d2-4908-977a-54370636cc98",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "OrderPhoto[oid]",
+									"value": "1361962",
+									"type": "text"
+								},
+								{
+									"key": "OrderPhoto[photo]",
+									"type": "file",
+									"value": null
+								},
+								{
+									"key": "OrderPhoto[lat]",
+									"value": "",
+									"description": "[не обязательный параметр]",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "OrderPhoto[lng]",
+									"value": "",
+									"description": "[не обязательный параметр]",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/SavePhoto"
+					},
+					"response": []
+				},
+				{
+					"name": "changeStatus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "4913e8e8-9c49-4c1b-b616-8b3c264eecf9"
+							}
+						}
+					],
+					"_postman_id": "fd2ad8c4-40c8-4b4c-ad23-dd9dec368f7b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "4262240",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "4",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/changeStatus"
+					},
+					"response": []
+				},
+				{
+					"name": "getMyOrders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"id": "818b922d-1e28-4e67-a712-c95696f2a1be"
+							}
+						}
+					],
+					"_postman_id": "3be7ffd5-b9f2-4a80-a847-b7ec2f2a2850",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{peshkariki2}}/eApis/app/order/GetMyOrders",
+						"description": "получить мои заказы"
+					},
+					"response": []
+				},
+				{
+					"name": "getorder",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "9c398c66-c57e-4929-aa8b-cfec0055a0c6"
+							}
+						}
+					],
+					"_postman_id": "cac970e8-4ca9-4f60-a6d1-2ccdf9240618",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "2335589 ",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/getOrder"
+					},
+					"response": []
+				},
+				{
+					"name": "GetArchiveOrders",
+					"_postman_id": "821bed56-05bd-4e82-ab43-3ce0f30d6793",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "did",
+									"value": "4251297",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/GetArchiveOrders"
+					},
+					"response": []
+				},
+				{
+					"name": "AddUserToBlacklist",
+					"_postman_id": "317cfd9a-a11e-43b7-9b97-c80179458d15",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "2328979",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "ывввввввввввввввввввввввввввввввввввв",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/AddUserToBlacklist"
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveUserFromBlacklist",
+					"_postman_id": "6e3c01ed-6b45-494a-86d8-752cde2279b2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "2328979",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "ывввввввввввввввввввввввввввввввввввв",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/order/RemoveUserFromBlacklist"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "993f1390-a424-4cf5-86f1-123a1d20437f"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "editProfile",
+					"_postman_id": "8f1d7d97-789a-4151-ad73-57303c011295",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userData[pass][old]",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "userData[pass][new]",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "userData[pass][repeatNew]",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "userData[email]",
+									"value": "321444321221@gmail.com",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/User/EditProfile"
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeProfile",
+					"_postman_id": "80905f03-1ded-44a3-9072-aea9e1a7a372",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userData[pass][old]",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "userData[pass][new]",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "userData[pass][repeatNew]",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "userData[email]",
+									"value": "321444321221@gmail.com",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/User/ChangeProfile"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"_postman_id": "e400e44d-7bc3-4be3-b462-7dc1fbd29201",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPIApp}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ru",
+								"description": "ru или en",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/User/get"
+					},
+					"response": []
+				},
+				{
+					"name": "setSettings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "c5f63a0c-4b05-43ed-9cfe-6e865f980204"
+							}
+						}
+					],
+					"_postman_id": "e1d86bb6-e243-4656-bef6-e34f15932580",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "settings[min_price]",
+									"value": "0",
+									"description": "минимальная оплата в заказе",
+									"type": "text"
+								},
+								{
+									"key": "settings[app_push]",
+									"value": "1",
+									"description": "получать уведомления (пуши)",
+									"type": "text"
+								},
+								{
+									"key": "settings[order_day_visible]",
+									"value": "3",
+									"description": "Показывать доставки на (1 - все дни / 2 - сегодня / 3- завтра)",
+									"type": "text"
+								},
+								{
+									"key": "settings[order_hide_comission]",
+									"value": "0",
+									"description": "Показать оплату без комисии (для приложения)",
+									"type": "text"
+								},
+								{
+									"key": "settings[sort_type_order]",
+									"value": "0",
+									"description": "сортировка заказов по 0 - времени / 1 - по дистанции",
+									"type": "text"
+								},
+								{
+									"key": "settings[has_pesh]",
+									"value": "1",
+									"description": "курьер доставляет пешком",
+									"type": "text"
+								},
+								{
+									"key": "settings[has_auto]",
+									"value": "1",
+									"description": "курьер доставляет на легковом авто",
+									"type": "text"
+								},
+								{
+									"key": "settings[has_auto_middle]",
+									"value": "1",
+									"description": "курьер доставляет на \"каблуке\" или универсале",
+									"type": "text"
+								},
+								{
+									"key": "settings[has_auto_big]",
+									"value": "1",
+									"description": "курьер доставляет на грузовом авто",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/user/SetSettings",
+						"description": "получить настройки пользователя"
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeAvatar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "d957fcc0-e0fa-4cff-b5e8-7865e14fb78b"
+							}
+						}
+					],
+					"_postman_id": "a6570c92-cd5f-45a3-97a0-138ac89062d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbiI6IjI3YzMyMjQ2ZDc0MjJhNmIyNDQwMjIyMmQ3MGZhN2U4OGE2ZjljOWY1NzRiYjFhNjY5NTMzOGVjZjNlOTMzM2QiLCJwbGF0Zm9ybSI6IjIifQ.38TenoYQ-iv2832bw693GzWQqDuNKrvB7NXz4bZZ_j0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "User[avatar]",
+									"type": "file",
+									"src": "/C:/Users/Andrey/Desktop/something/photo_2020-02-25_18-37-38.jpg"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/user/SetSettings",
+						"description": "Сменить аватар"
+					},
+					"response": []
+				},
+				{
+					"name": "hideOrder",
+					"_postman_id": "c9ca1e13-0959-474b-bd39-405cff54b036",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "2330104",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/user/HideOrder"
+					},
+					"response": []
+				},
+				{
+					"name": "SaveGcmToken",
+					"_postman_id": "0b69810c-efb7-4c1c-a201-2e4d517b4ae9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "gcm_token",
+									"value": "fOsuENzKQQWdu3tcMwtKWv:APA91bGqZC6z2JjefzzcEMd4ZdH3KqvCmEbjwgYM2rUoLxtNhm753fFFbxhAlsSwjASdWh7xu_wiot-jPDK5LorE8b7IQb7Jqnd0QXtHsbOeZifK_OEc5cmU81vUT52pa4HPLJy21-45",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/user/SaveGcmToken"
+					},
+					"response": []
+				},
+				{
+					"name": "premiumChange",
+					"_postman_id": "28deeb63-7d66-497a-a4dd-f266714f1019",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "premium",
+									"value": "1",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/user/PremiumChange"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFromBlackList",
+					"_postman_id": "2b60d417-2719-4bdb-a5a8-eb8c11a20849",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shop_id",
+									"value": "33378790",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/app/user/DeleteFromBlackList"
+					},
+					"response": []
+				},
+				{
+					"name": "GetPromoCode",
+					"_postman_id": "b9d9622f-826b-436e-bc6c-3f621d318ae0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkariki1}}/eApis/app/user/GetPromoCode"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSelfEmployedData",
+					"_postman_id": "dbae8a20-66f1-4d36-8a3e-a744276a03e9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkariki1}}/eApis/app/user/UpdateSelfEmployedData"
+					},
+					"response": []
+				},
+				{
+					"name": "GetSelfEmpContract",
+					"_postman_id": "34d3a01e-d75b-46f7-afa2-a691a336d2ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oid",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki2}}/eApis/app/user/GetSelfEmpContract"
+					},
+					"response": []
+				},
+				{
+					"name": "SaveVersionApp",
+					"_postman_id": "196e95a8-1828-41ad-94b3-8d8b10992b82",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "UserDevice[versionApp]",
+									"value": "412",
+									"type": "text"
+								},
+								{
+									"key": "UserDevice[platform]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "UserDevice[brand]",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/User/SaveVersionApp"
+					},
+					"response": []
+				},
+				{
+					"name": "AutoworkChange",
+					"_postman_id": "1105fab4-3f4f-4fe5-9843-8aa10318055e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "autowork",
+									"value": "1",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki2}}/eApis/app/User/AutoworkChange"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCashless",
+					"_postman_id": "ce18b3c9-7f63-41f5-be0a-d27e0c247a96",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/User/GetCashless"
+					},
+					"response": []
+				},
+				{
+					"name": "Location",
+					"_postman_id": "17c3468c-2f83-4a54-9e4c-03a56a973b8c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coords[lat]",
+									"value": "55.748542",
+									"type": "text"
+								},
+								{
+									"key": "coords[lng]",
+									"value": "37.626745",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/User/Location"
+					},
+					"response": []
+				},
+				{
+					"name": "GetStat",
+					"_postman_id": "e7e2d40d-dce7-4571-b97f-dc50bd2b49e4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/User/GetStats"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "aafd2875-042a-4354-a2bb-881b27cd9704"
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "getMenu",
+					"_postman_id": "327a94e1-a5ff-46d4-9869-3910a8186ac3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkariki1}}/eApis/app/ticket/GetMenu"
+					},
+					"response": []
+				},
+				{
+					"name": "close",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "4c4e83cd-1e2c-4ce6-ae51-b43a607bf34f"
+							}
+						}
+					],
+					"_postman_id": "8331bc3c-f1b1-46c7-9fed-575934efb168",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ticket_id",
+									"value": "{{ticketId}}",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/ticket/close",
+						"description": "завершение тикета"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "11fe9b70-a231-4b34-a7b7-3c09f7ce79b2"
+							}
+						}
+					],
+					"_postman_id": "d030fe54-8a4c-44c4-85c2-c5527c612298",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkariki1}}/eApis/app/ticket/get",
+						"description": "отдаст список тикетов пользователя"
+					},
+					"response": []
+				},
+				{
+					"name": "getAnswers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "0fb7c53b-d3d4-4161-bb59-79fc00e97462"
+							}
+						}
+					],
+					"_postman_id": "82e9b1aa-1322-4c08-8f2e-37cce55876d1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ticket_id",
+									"value": "5314",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/ticket/GetAnswers",
+						"description": "получить сообщения по тикету"
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsondata = pm.response.json();",
+									"pm.environment.set( \"ticketId\" , jsondata.ticketId);",
+									"console.log(JSON.stringify(pm.environment.get(\"ticketId\")));",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"id": "4d8d8be0-eb7d-40c0-9a94-454f7e32c346"
+							}
+						}
+					],
+					"_postman_id": "7585805b-579b-4c16-baa0-465eda79f290",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ticket[subject]",
+									"value": "вы втираете какую то дичь",
+									"description": "тема обращения",
+									"type": "text"
+								},
+								{
+									"key": "ticket[subject_id]",
+									"value": "121",
+									"description": "ид вопроса (faq) [не обязательное поле]",
+									"type": "text"
+								},
+								{
+									"key": "ticket[order_id]",
+									"value": "",
+									"description": "ид заказа [не обязательное поле]",
+									"type": "text"
+								},
+								{
+									"key": "ticket[quest]",
+									"value": "когда вы ответите на мой вопрос",
+									"description": "текст обращения",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/ticket/Add"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "3c8dad7e-aea9-41a3-860a-0f48fc2102b6"
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "getCards",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response_true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript",
+								"id": "19d100c8-ce33-468b-96dd-7bcecacb2838"
+							}
+						}
+					],
+					"_postman_id": "cfe3ad0e-0a41-4153-a220-4a1df1175468",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "pay",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki2}}/eApis/app/payment/getCards",
+						"description": "Получить информацию о банковских картах"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCard",
+					"_postman_id": "c6de7dda-3b4e-4674-8a84-2c185c7026a7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_id",
+									"value": "41",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "4",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Payment/DeleteCard"
+					},
+					"response": []
+				},
+				{
+					"name": "getTarifMap",
+					"_postman_id": "2eebf7f3-fade-43df-ae49-85faa1047708",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkariki1}}/eApis/app/Payment/GetTarifMap"
+					},
+					"response": []
+				},
+				{
+					"name": "cashoutCancel",
+					"_postman_id": "66856080-2e4f-4fec-9793-16f0320fc8db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "489",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Payment/CashoutCancel"
+					},
+					"response": []
+				},
+				{
+					"name": "GetHistoryPagination",
+					"_postman_id": "f13ad19d-4ab9-44c8-8b0b-44e920e72813",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki2}}/eApis/app/Payment/GetHistoryPagination"
+					},
+					"response": []
+				},
+				{
+					"name": "Cashout",
+					"_postman_id": "5251c635-e0e1-40c8-b711-4e5d1d85cdc1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cashout[type]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "cashout[source_info]",
+									"value": "411111XXXXXX1111",
+									"type": "text"
+								},
+								{
+									"key": "cashout[initial_value]",
+									"value": "100",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": {
+							"raw": "{{peshkariki1}}/eApis/app/Payment/Cashout?",
+							"host": [
+								"{{peshkariki1}}"
+							],
+							"path": [
+								"eApis",
+								"app",
+								"Payment",
+								"Cashout"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay",
+					"_postman_id": "99522e91-ea90-4ad5-994b-d88c08105737",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pay[sum]",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "pay[card_id]",
+									"value": "574",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Payment/Pay"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "382e2ee0-41cf-40cf-a9bd-274f42ac9e38"
+		},
+		{
+			"name": "Duty",
+			"item": [
+				{
+					"name": "routeList",
+					"_postman_id": "970e32c2-d53b-4db6-99f6-0609dfe1f85c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2022-12-02",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/duty/GetTariffsByDate"
+					},
+					"response": []
+				},
+				{
+					"name": "routeList Copy",
+					"_postman_id": "526116f0-6cec-4559-ad10-92a233c532e2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/duty/routeList"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9efc91a9-0e3c-4616-98ed-b01626f08d23"
+		},
+		{
+			"name": "CheckOnline",
+			"item": [
+				{
+					"name": "get",
+					"_postman_id": "ac0c84f6-3f6b-4159-8ca0-145be7b58d85",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkariki1}}/eApis/app/CheckOnline/Get"
+					},
+					"response": []
+				},
+				{
+					"name": "AccessCheckOnline",
+					"_postman_id": "309855ca-ed56-4857-97ba-b49ec978a9c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{peshkariki1}}/user/AccessCheckOnline?uid=33380153&name=1&token_app=7174",
+							"host": [
+								"{{peshkariki1}}"
+							],
+							"path": [
+								"user",
+								"AccessCheckOnline"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "33380153"
+								},
+								{
+									"key": "name",
+									"value": "1"
+								},
+								{
+									"key": "token_app",
+									"value": "7174"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "bf11b093-4ead-4f9b-b472-37e136b2259a"
+		},
+		{
+			"name": "OrderTracking",
+			"item": [
+				{
+					"name": "SearchOrders",
+					"_postman_id": "9176cb45-a6c2-4f9a-9c2f-45ce584ad67b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tracking[phone]",
+									"value": "8(945)321-31-32",
+									"type": "text"
+								},
+								{
+									"key": "tracking[oid]",
+									"value": "2335178",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/OrderTracking/SearchOrders"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6faf804e-f6f0-4a33-a3a6-450a7b92da79"
+		},
+		{
+			"name": "Crm",
+			"item": [
+				{
+					"name": "GetCouriersList",
+					"_postman_id": "9e9abf27-69ff-4991-bb2c-a5567c6bebbc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tokenAPIApp}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{peshkarikiAPI}}/eApis/app/Crm/GetCouriersList"
+					},
+					"response": []
+				},
+				{
+					"name": "InviteCourier",
+					"_postman_id": "af7bb352-801d-434e-a573-0da5b776eac0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "courier_id",
+									"value": "33377656",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/InviteCourier"
+					},
+					"response": []
+				},
+				{
+					"name": "ConfirmInvite",
+					"_postman_id": "4818a691-71d6-413c-9769-67410df70e34",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "courier_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/ConfirmInvite"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourier",
+					"_postman_id": "c8288b90-2f03-4281-b776-106f28fb44d4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "courier_id",
+									"value": "33377656",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/DeleteCourier"
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeVisibleCommonStock",
+					"_postman_id": "b5d8ba11-fa7f-4f81-a5d7-07830fcb928a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "courier_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "val",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/ChangeVisibleCommonStock"
+					},
+					"response": []
+				},
+				{
+					"name": "СhangeVisibleCourier",
+					"_postman_id": "f6738176-0079-44da-938d-9e2353bd3f8c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "val",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/СhangeVisibleCourier"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteShop",
+					"_postman_id": "0fb126b4-0808-40ec-a772-12473f7646d4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shop_id",
+									"value": "5",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/DeleteShop"
+					},
+					"response": []
+				},
+				{
+					"name": "GetShopsList",
+					"_postman_id": "3d75067e-28d2-4d01-b3f4-96ed950e6db4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{peshkariki1}}/eApis/app/Crm/GetShopsList"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "e9f6013e-c493-4276-9013-b8216df3230b"
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "New Request",
+					"_postman_id": "137e3a84-372c-4b74-866b-31322d4c7443",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "aid",
+									"value": "83",
+									"type": "text"
+								}
+							],
+							"options": {}
+						},
+						"url": "{{peshkarikiAPI}}/eApis/frontend/AddressBook/GetAll"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "8b177fe6-0276-4a8e-bd9f-5c7f3b95e174"
+		},
+		{
+			"name": "test",
+			"_postman_id": "5d2aff63-74f9-415d-9552-734f56cf8a17",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true,
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer CF3Xl2XV6jMKZgqYSZFws9IPlgDvxqOfFSmrlmtkTRupbU2VklvhX9kC9JCnKVSDX2VrDgAPuzvNm3WccUIaDg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {}
+				},
+				"url": "{{peshkariki1}}/eApis/app/user/GetStats"
+			},
+			"response": []
+		}
+	]
+}
