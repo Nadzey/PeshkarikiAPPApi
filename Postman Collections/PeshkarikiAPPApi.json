@@ -35,7 +35,7 @@
 							}
 						}
 					],
-					"_postman_id": "05130137-fa5d-4df4-a57e-0572cce084b9",
+					"id": "05130137-fa5d-4df4-a57e-0572cce084b9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -106,8 +106,7 @@
 									"value": "{{password}}",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/register",
 						"description": "Регистрация"
@@ -143,7 +142,7 @@
 							}
 						}
 					],
-					"_postman_id": "3f223dc4-7b75-4fad-a8eb-b32eca9094ee",
+					"id": "3f223dc4-7b75-4fad-a8eb-b32eca9094ee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -166,10 +165,7 @@
 									"value": "{{password}}",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/login"
 					},
@@ -204,7 +200,7 @@
 							}
 						}
 					],
-					"_postman_id": "b3510a90-a095-49ff-a367-be2a18d991cc",
+					"id": "b3510a90-a095-49ff-a367-be2a18d991cc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -227,10 +223,7 @@
 									"value": "{{password}}",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "{{peshkarikiAPI}}//eApis/frontend/auth/login"
 					},
@@ -257,7 +250,7 @@
 							}
 						}
 					],
-					"_postman_id": "f0196fb1-4988-4310-936f-bde1a3db8ee0",
+					"id": "f0196fb1-4988-4310-936f-bde1a3db8ee0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -279,8 +272,7 @@
 									"description": "[не обязательное поле]",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/ConfirmNumber",
 						"description": "Регистрация"
@@ -308,7 +300,7 @@
 							}
 						}
 					],
-					"_postman_id": "dac2caaa-2732-42cc-aca5-10d6d8703d70",
+					"id": "dac2caaa-2732-42cc-aca5-10d6d8703d70",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -323,10 +315,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {}
-							}
+							"raw": ""
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/logout",
 						"description": "Закрыть токен"
@@ -334,7 +323,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "33580682-e61a-4c34-b049-c3be8601e8d0"
+			"id": "33580682-e61a-4c34-b049-c3be8601e8d0"
 		},
 		{
 			"name": "AuthUserType2",
@@ -366,7 +355,7 @@
 							}
 						}
 					],
-					"_postman_id": "56cc1c31-3f1d-4223-98b1-5255ff6f95bb",
+					"id": "56cc1c31-3f1d-4223-98b1-5255ff6f95bb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -437,8 +426,7 @@
 									"value": "{{password}}",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/register",
 						"description": "Регистрация"
@@ -474,7 +462,7 @@
 							}
 						}
 					],
-					"_postman_id": "2b56c05f-1e2a-4dbc-8a8b-53bcefbdccd7",
+					"id": "2b56c05f-1e2a-4dbc-8a8b-53bcefbdccd7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -497,10 +485,7 @@
 									"value": "{{password}}",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/login"
 					},
@@ -527,7 +512,7 @@
 							}
 						}
 					],
-					"_postman_id": "8ab12d12-b239-46a3-8ba3-78f29bc7f20e",
+					"id": "8ab12d12-b239-46a3-8ba3-78f29bc7f20e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -549,8 +534,7 @@
 									"description": "[не обязательное поле]",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/ConfirmNumber",
 						"description": "Регистрация"
@@ -578,7 +562,7 @@
 							}
 						}
 					],
-					"_postman_id": "e32c1207-27f1-49a0-891e-46f49809c194",
+					"id": "e32c1207-27f1-49a0-891e-46f49809c194",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -593,10 +577,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {}
-							}
+							"raw": ""
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/auth/logout",
 						"description": "Закрыть токен"
@@ -604,7 +585,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "b33cd4ca-1c37-46a9-8d50-55e6d74b0294"
+			"id": "b33cd4ca-1c37-46a9-8d50-55e6d74b0294"
 		},
 		{
 			"name": "OrderForm",
@@ -646,7 +627,7 @@
 							}
 						}
 					],
-					"_postman_id": "b3bd190a-6cb3-45fa-9dab-58d45f1daff8",
+					"id": "b3bd190a-6cb3-45fa-9dab-58d45f1daff8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -988,8 +969,7 @@
 									"value": "100",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/CreateOrder"
 					},
@@ -1016,7 +996,7 @@
 							}
 						}
 					],
-					"_postman_id": "82252744-9aa5-494b-99d2-4200aabf44fe",
+					"id": "82252744-9aa5-494b-99d2-4200aabf44fe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1347,8 +1327,7 @@
 									"value": "0",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetCheckPrint"
 					},
@@ -1375,7 +1354,7 @@
 							}
 						}
 					],
-					"_postman_id": "674ff553-3581-4dac-91d9-c419a8890b9b",
+					"id": "674ff553-3581-4dac-91d9-c419a8890b9b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1396,8 +1375,7 @@
 									"value": "{{orderIdApp}}",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetProps"
 					},
@@ -1424,7 +1402,7 @@
 							}
 						}
 					],
-					"_postman_id": "1375ae4c-7a5a-4152-9423-31bd73cb4345",
+					"id": "1375ae4c-7a5a-4152-9423-31bd73cb4345",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1445,8 +1423,7 @@
 									"value": "{{promocode}}",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/CheckPromo"
 					},
@@ -1473,7 +1450,7 @@
 							}
 						}
 					],
-					"_postman_id": "a6e28ade-3b67-455c-a642-f5333b562779",
+					"id": "a6e28ade-3b67-455c-a642-f5333b562779",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1499,8 +1476,7 @@
 									"value": "37.585485",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": {
 							"raw": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetAdresByCoord",
@@ -1550,7 +1526,7 @@
 							}
 						}
 					],
-					"_postman_id": "8ab0102d-6c92-4ae8-9b98-7f6358295d1f",
+					"id": "8ab0102d-6c92-4ae8-9b98-7f6358295d1f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1582,8 +1558,7 @@
 									"value": "2",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/GetAddress"
 					},
@@ -1610,7 +1585,7 @@
 							}
 						}
 					],
-					"_postman_id": "950b9616-2ed5-48b7-9c81-78338be68171",
+					"id": "950b9616-2ed5-48b7-9c81-78338be68171",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1936,8 +1911,7 @@
 									"value": "1000",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/Edit"
 					},
@@ -1964,7 +1938,7 @@
 							}
 						}
 					],
-					"_postman_id": "bffb0b06-3987-4cd2-a62d-6a205aef269c",
+					"id": "bffb0b06-3987-4cd2-a62d-6a205aef269c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1982,8 +1956,7 @@
 									"value": "{{phoneAnonimUser}}",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/SendRegistryCode"
 					},
@@ -2010,7 +1983,7 @@
 							}
 						}
 					],
-					"_postman_id": "e261d2cb-a4f1-4321-bfc7-0923b3d9c395",
+					"id": "e261d2cb-a4f1-4321-bfc7-0923b3d9c395",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2030,8 +2003,7 @@
 									"value": "35553",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/СonfirmRegistryCode"
 					},
@@ -2058,7 +2030,7 @@
 							}
 						}
 					],
-					"_postman_id": "584bcbfa-031c-4362-b4f7-c17714aa01e6",
+					"id": "584bcbfa-031c-4362-b4f7-c17714aa01e6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2461,8 +2433,7 @@
 									"value": "10000",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/CheckValidate"
 					},
@@ -2489,7 +2460,7 @@
 							}
 						}
 					],
-					"_postman_id": "88bc63f7-0058-4937-8f4c-3bf63ccad710",
+					"id": "88bc63f7-0058-4937-8f4c-3bf63ccad710",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2523,15 +2494,14 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/OrderForm/SberbankPay"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "dad88e79-990f-4029-b235-b277a5ad8905"
+			"id": "dad88e79-990f-4029-b235-b277a5ad8905"
 		},
 		{
 			"name": "Order",
@@ -2560,7 +2530,7 @@
 									}
 								}
 							],
-							"_postman_id": "58527d80-c19d-466b-bbf2-d4c0c8507cc3",
+							"id": "58527d80-c19d-466b-bbf2-d4c0c8507cc3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2586,8 +2556,7 @@
 											"value": "",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/ShopAddOrderPageWeb"
 							},
@@ -2614,7 +2583,7 @@
 									}
 								}
 							],
-							"_postman_id": "f93e480c-a071-47e2-ae98-ca733eb123bb",
+							"id": "f93e480c-a071-47e2-ae98-ca733eb123bb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2635,8 +2604,7 @@
 											"value": "2065959",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/ShopCancelOrder",
 								"description": "Курьер отказывается от заказа"
@@ -2645,7 +2613,7 @@
 						},
 						{
 							"name": "AddCourierToFavorites",
-							"_postman_id": "98631a57-37dc-49e8-ba58-e0e018f2684b",
+							"id": "98631a57-37dc-49e8-ba58-e0e018f2684b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2671,8 +2639,7 @@
 											"value": "ывввввввввввввввввввввввввввввввввввв",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/AddCourierToFavorites"
 							},
@@ -2680,7 +2647,7 @@
 						},
 						{
 							"name": "RemoveCourierFromFavorites",
-							"_postman_id": "402d686c-ab8b-4872-8a87-6f1880554d57",
+							"id": "402d686c-ab8b-4872-8a87-6f1880554d57",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2707,8 +2674,7 @@
 											"type": "text",
 											"disabled": true
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/RemoveCourierFromFavorites"
 							},
@@ -2716,7 +2682,7 @@
 						},
 						{
 							"name": "GetAdditionOrderPrice",
-							"_postman_id": "28b583b6-0c67-4717-93ce-694e4a8861b4",
+							"id": "28b583b6-0c67-4717-93ce-694e4a8861b4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2737,8 +2703,7 @@
 											"value": "4256037",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/GetAdditionOrderPrice"
 							},
@@ -2746,7 +2711,7 @@
 						},
 						{
 							"name": "SetAdditionOrderPrice",
-							"_postman_id": "a595b35d-18ab-41b3-a35b-6a5668555b9b",
+							"id": "a595b35d-18ab-41b3-a35b-6a5668555b9b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2777,8 +2742,7 @@
 											"value": "300",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/SetAdditionOrderPrice"
 							},
@@ -2786,7 +2750,7 @@
 						},
 						{
 							"name": "ShopEditOrderPageWeb",
-							"_postman_id": "1faa2d7b-a52d-400c-a54c-5641362ffc72",
+							"id": "1faa2d7b-a52d-400c-a54c-5641362ffc72",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2808,16 +2772,14 @@
 											"type": "text",
 											"disabled": true
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/ShopEditOrderPageWeb"
 							},
 							"response": []
 						}
 					],
-					"_postman_id": "26d2b4df-98d9-471d-aacc-0445c764a497",
-					"_postman_isSubFolder": true
+					"id": "26d2b4df-98d9-471d-aacc-0445c764a497"
 				},
 				{
 					"name": "only_courier",
@@ -2843,7 +2805,7 @@
 									}
 								}
 							],
-							"_postman_id": "d6960479-ef6e-4409-9020-7fb83dcb9333",
+							"id": "d6960479-ef6e-4409-9020-7fb83dcb9333",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2869,8 +2831,7 @@
 											"value": "",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/AvailableOrders"
 							},
@@ -2897,7 +2858,7 @@
 									}
 								}
 							],
-							"_postman_id": "c0ac2445-8a97-427c-8b3f-41c592e17009",
+							"id": "c0ac2445-8a97-427c-8b3f-41c592e17009",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2918,8 +2879,7 @@
 											"value": "2332868",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/take"
 							},
@@ -2946,7 +2906,7 @@
 									}
 								}
 							],
-							"_postman_id": "b1d5e0a1-95bb-492c-9cf7-0e153a33dac7",
+							"id": "b1d5e0a1-95bb-492c-9cf7-0e153a33dac7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2972,8 +2932,7 @@
 											"value": "",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/CancelOrder",
 								"description": "Курьер отказывается от заказа"
@@ -2982,7 +2941,7 @@
 						},
 						{
 							"name": "confirmFinishCode",
-							"_postman_id": "85b94bfc-77e2-48f4-b2d1-6f9b746c965b",
+							"id": "85b94bfc-77e2-48f4-b2d1-6f9b746c965b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3015,8 +2974,7 @@
 											"value": "924",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/ConfirmFinishCode",
 								"description": "активация кода автозавершения"
@@ -3025,7 +2983,7 @@
 						},
 						{
 							"name": "setErrorInOrder",
-							"_postman_id": "f1f4a9ea-ba4a-4c60-a964-88ff5f9df35f",
+							"id": "f1f4a9ea-ba4a-4c60-a964-88ff5f9df35f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3051,8 +3009,7 @@
 											"value": "",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/SetErrorInOrder"
 							},
@@ -3060,7 +3017,7 @@
 						},
 						{
 							"name": "GetAvailableStatusForDot",
-							"_postman_id": "91b4df79-7472-40ff-ba06-fae0ab4c0ec8",
+							"id": "91b4df79-7472-40ff-ba06-fae0ab4c0ec8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3081,8 +3038,7 @@
 											"value": "4251297",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": {
 									"raw": "{{peshkariki1}}/eApis/app/order/GetAvailableStatusForDot",
@@ -3108,7 +3064,7 @@
 						},
 						{
 							"name": "CourierSetTimeWait",
-							"_postman_id": "f6d160f1-bff6-4010-a8c9-2a53d8d56d1b",
+							"id": "f6d160f1-bff6-4010-a8c9-2a53d8d56d1b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3134,8 +3090,7 @@
 											"value": "15",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/CourierSetTimeWait"
 							},
@@ -3143,7 +3098,7 @@
 						},
 						{
 							"name": "ChangeDotStatus",
-							"_postman_id": "03eea071-90a7-4584-acc4-a9bef9b4573f",
+							"id": "03eea071-90a7-4584-acc4-a9bef9b4573f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3181,8 +3136,7 @@
 											"type": "text",
 											"disabled": true
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/ChangeDotStatus"
 							},
@@ -3209,7 +3163,7 @@
 									}
 								}
 							],
-							"_postman_id": "711df13c-c450-4d8f-9f02-5b26ada941ff",
+							"id": "711df13c-c450-4d8f-9f02-5b26ada941ff",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3230,8 +3184,7 @@
 											"value": "2333804",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/GetInstruction"
 							},
@@ -3239,7 +3192,7 @@
 						},
 						{
 							"name": "ReturnItems",
-							"_postman_id": "03ad8405-dca2-4407-8529-06d717508871",
+							"id": "03ad8405-dca2-4407-8529-06d717508871",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3265,8 +3218,7 @@
 											"value": "5",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/ReturnItems"
 							},
@@ -3274,7 +3226,7 @@
 						},
 						{
 							"name": "CancelReturnDot",
-							"_postman_id": "e2296b30-44fb-4276-8203-c6d0c535c15b",
+							"id": "e2296b30-44fb-4276-8203-c6d0c535c15b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3295,8 +3247,7 @@
 											"value": "4262044",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/CancelReturnDot"
 							},
@@ -3304,7 +3255,7 @@
 						},
 						{
 							"name": "CreateDotCheque",
-							"_postman_id": "b9dc88e0-bc13-4782-b072-df1c20efa5f0",
+							"id": "b9dc88e0-bc13-4782-b072-df1c20efa5f0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3325,20 +3276,18 @@
 											"value": "4261594",
 											"type": "text"
 										}
-									],
-									"options": {}
+									]
 								},
 								"url": "{{peshkariki1}}/eApis/app/order/CreateDotCheque"
 							},
 							"response": []
 						}
 					],
-					"_postman_id": "dcaafc64-5274-4eb9-ac85-2c37f3488fe4",
-					"_postman_isSubFolder": true
+					"id": "dcaafc64-5274-4eb9-ac85-2c37f3488fe4"
 				},
 				{
 					"name": "archiveOrder",
-					"_postman_id": "ee39dcf0-88ed-454b-89aa-2d06a68e3cf3",
+					"id": "ee39dcf0-88ed-454b-89aa-2d06a68e3cf3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3359,8 +3308,7 @@
 									"value": "2327426 ",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/order/archiveOrder"
 					},
@@ -3387,7 +3335,7 @@
 							}
 						}
 					],
-					"_postman_id": "782abdbc-34d2-4908-977a-54370636cc98",
+					"id": "782abdbc-34d2-4908-977a-54370636cc98",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3427,8 +3375,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/order/SavePhoto"
 					},
@@ -3440,6 +3387,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "4913e8e8-9c49-4c1b-b616-8b3c264eecf9",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -3450,12 +3398,11 @@
 									"    pm.expect(jsonData.success).to.eql(true);",
 									"});"
 								],
-								"type": "text/javascript",
-								"id": "4913e8e8-9c49-4c1b-b616-8b3c264eecf9"
+								"type": "text/javascript"
 							}
 						}
 					],
-					"_postman_id": "fd2ad8c4-40c8-4b4c-ad23-dd9dec368f7b",
+					"id": "fd2ad8c4-40c8-4b4c-ad23-dd9dec368f7b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3463,7 +3410,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{token}}"
+								"token": "{{tokenAPP2}}"
 							}
 						},
 						"method": "POST",
@@ -3481,10 +3428,9 @@
 									"value": "4",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
-						"url": "{{peshkariki1}}/eApis/app/order/changeStatus"
+						"url": "{{peshkarikiAPI}}/eApis/app/order/changeStatus"
 					},
 					"response": []
 				},
@@ -3502,7 +3448,7 @@
 							}
 						}
 					],
-					"_postman_id": "3be7ffd5-b9f2-4a80-a847-b7ec2f2a2850",
+					"id": "3be7ffd5-b9f2-4a80-a847-b7ec2f2a2850",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3517,8 +3463,7 @@
 						"header": [],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {}
+							"formdata": []
 						},
 						"url": "{{peshkariki2}}/eApis/app/order/GetMyOrders",
 						"description": "получить мои заказы"
@@ -3546,7 +3491,7 @@
 							}
 						}
 					],
-					"_postman_id": "cac970e8-4ca9-4f60-a6d1-2ccdf9240618",
+					"id": "cac970e8-4ca9-4f60-a6d1-2ccdf9240618",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3567,8 +3512,7 @@
 									"value": "2335589 ",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/order/getOrder"
 					},
@@ -3576,7 +3520,7 @@
 				},
 				{
 					"name": "GetArchiveOrders",
-					"_postman_id": "821bed56-05bd-4e82-ab43-3ce0f30d6793",
+					"id": "821bed56-05bd-4e82-ab43-3ce0f30d6793",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3598,8 +3542,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/order/GetArchiveOrders"
 					},
@@ -3607,7 +3550,7 @@
 				},
 				{
 					"name": "AddUserToBlacklist",
-					"_postman_id": "317cfd9a-a11e-43b7-9b97-c80179458d15",
+					"id": "317cfd9a-a11e-43b7-9b97-c80179458d15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3633,8 +3576,7 @@
 									"value": "ывввввввввввввввввввввввввввввввввввв",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/order/AddUserToBlacklist"
 					},
@@ -3642,7 +3584,7 @@
 				},
 				{
 					"name": "RemoveUserFromBlacklist",
-					"_postman_id": "6e3c01ed-6b45-494a-86d8-752cde2279b2",
+					"id": "6e3c01ed-6b45-494a-86d8-752cde2279b2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3668,22 +3610,21 @@
 									"value": "ывввввввввввввввввввввввввввввввввввв",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/order/RemoveUserFromBlacklist"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "993f1390-a424-4cf5-86f1-123a1d20437f"
+			"id": "993f1390-a424-4cf5-86f1-123a1d20437f"
 		},
 		{
 			"name": "User",
 			"item": [
 				{
 					"name": "editProfile",
-					"_postman_id": "8f1d7d97-789a-4151-ad73-57303c011295",
+					"id": "8f1d7d97-789a-4151-ad73-57303c011295",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3720,8 +3661,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/User/EditProfile"
 					},
@@ -3729,7 +3669,7 @@
 				},
 				{
 					"name": "ChangeProfile",
-					"_postman_id": "80905f03-1ded-44a3-9072-aea9e1a7a372",
+					"id": "80905f03-1ded-44a3-9072-aea9e1a7a372",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3766,8 +3706,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/User/ChangeProfile"
 					},
@@ -3775,7 +3714,7 @@
 				},
 				{
 					"name": "get",
-					"_postman_id": "e400e44d-7bc3-4be3-b462-7dc1fbd29201",
+					"id": "e400e44d-7bc3-4be3-b462-7dc1fbd29201",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
 						"disableBodyPruning": true
@@ -3835,7 +3774,7 @@
 							}
 						}
 					],
-					"_postman_id": "e1d86bb6-e243-4656-bef6-e34f15932580",
+					"id": "e1d86bb6-e243-4656-bef6-e34f15932580",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3905,8 +3844,7 @@
 									"description": "курьер доставляет на грузовом авто",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/user/SetSettings",
 						"description": "получить настройки пользователя"
@@ -3934,7 +3872,7 @@
 							}
 						}
 					],
-					"_postman_id": "a6570c92-cd5f-45a3-97a0-138ac89062d8",
+					"id": "a6570c92-cd5f-45a3-97a0-138ac89062d8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3968,8 +3906,7 @@
 									"type": "file",
 									"src": "/C:/Users/Andrey/Desktop/something/photo_2020-02-25_18-37-38.jpg"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/user/SetSettings",
 						"description": "Сменить аватар"
@@ -3978,7 +3915,7 @@
 				},
 				{
 					"name": "hideOrder",
-					"_postman_id": "c9ca1e13-0959-474b-bd39-405cff54b036",
+					"id": "c9ca1e13-0959-474b-bd39-405cff54b036",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3999,8 +3936,7 @@
 									"value": "2330104",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/user/HideOrder"
 					},
@@ -4008,7 +3944,7 @@
 				},
 				{
 					"name": "SaveGcmToken",
-					"_postman_id": "0b69810c-efb7-4c1c-a201-2e4d517b4ae9",
+					"id": "0b69810c-efb7-4c1c-a201-2e4d517b4ae9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4023,8 +3959,7 @@
 									"value": "fOsuENzKQQWdu3tcMwtKWv:APA91bGqZC6z2JjefzzcEMd4ZdH3KqvCmEbjwgYM2rUoLxtNhm753fFFbxhAlsSwjASdWh7xu_wiot-jPDK5LorE8b7IQb7Jqnd0QXtHsbOeZifK_OEc5cmU81vUT52pa4HPLJy21-45",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/user/SaveGcmToken"
 					},
@@ -4032,7 +3967,7 @@
 				},
 				{
 					"name": "premiumChange",
-					"_postman_id": "28deeb63-7d66-497a-a4dd-f266714f1019",
+					"id": "28deeb63-7d66-497a-a4dd-f266714f1019",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4053,8 +3988,7 @@
 									"value": "1",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/user/PremiumChange"
 					},
@@ -4062,7 +3996,7 @@
 				},
 				{
 					"name": "DeleteFromBlackList",
-					"_postman_id": "2b60d417-2719-4bdb-a5a8-eb8c11a20849",
+					"id": "2b60d417-2719-4bdb-a5a8-eb8c11a20849",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4083,8 +4017,7 @@
 									"value": "33378790",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/app/user/DeleteFromBlackList"
 					},
@@ -4092,7 +4025,7 @@
 				},
 				{
 					"name": "GetPromoCode",
-					"_postman_id": "b9d9622f-826b-436e-bc6c-3f621d318ae0",
+					"id": "b9d9622f-826b-436e-bc6c-3f621d318ae0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4111,7 +4044,7 @@
 				},
 				{
 					"name": "UpdateSelfEmployedData",
-					"_postman_id": "dbae8a20-66f1-4d36-8a3e-a744276a03e9",
+					"id": "dbae8a20-66f1-4d36-8a3e-a744276a03e9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4130,7 +4063,7 @@
 				},
 				{
 					"name": "GetSelfEmpContract",
-					"_postman_id": "34d3a01e-d75b-46f7-afa2-a691a336d2ad",
+					"id": "34d3a01e-d75b-46f7-afa2-a691a336d2ad",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4156,8 +4089,7 @@
 									"value": "",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki2}}/eApis/app/user/GetSelfEmpContract"
 					},
@@ -4165,7 +4097,7 @@
 				},
 				{
 					"name": "SaveVersionApp",
-					"_postman_id": "196e95a8-1828-41ad-94b3-8d8b10992b82",
+					"id": "196e95a8-1828-41ad-94b3-8d8b10992b82",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4196,8 +4128,7 @@
 									"value": "",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/User/SaveVersionApp"
 					},
@@ -4205,7 +4136,7 @@
 				},
 				{
 					"name": "AutoworkChange",
-					"_postman_id": "1105fab4-3f4f-4fe5-9843-8aa10318055e",
+					"id": "1105fab4-3f4f-4fe5-9843-8aa10318055e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4226,8 +4157,7 @@
 									"value": "1",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki2}}/eApis/app/User/AutoworkChange"
 					},
@@ -4235,7 +4165,7 @@
 				},
 				{
 					"name": "GetCashless",
-					"_postman_id": "ce18b3c9-7f63-41f5-be0a-d27e0c247a96",
+					"id": "ce18b3c9-7f63-41f5-be0a-d27e0c247a96",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4250,8 +4180,7 @@
 						"header": [],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {}
+							"formdata": []
 						},
 						"url": "{{peshkariki1}}/eApis/app/User/GetCashless"
 					},
@@ -4259,7 +4188,7 @@
 				},
 				{
 					"name": "Location",
-					"_postman_id": "17c3468c-2f83-4a54-9e4c-03a56a973b8c",
+					"id": "17c3468c-2f83-4a54-9e4c-03a56a973b8c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4285,8 +4214,7 @@
 									"value": "37.626745",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/User/Location"
 					},
@@ -4294,7 +4222,7 @@
 				},
 				{
 					"name": "GetStat",
-					"_postman_id": "e7e2d40d-dce7-4571-b97f-dc50bd2b49e4",
+					"id": "e7e2d40d-dce7-4571-b97f-dc50bd2b49e4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4309,22 +4237,21 @@
 						"header": [],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {}
+							"formdata": []
 						},
 						"url": "{{peshkariki1}}/eApis/app/User/GetStats"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "aafd2875-042a-4354-a2bb-881b27cd9704"
+			"id": "aafd2875-042a-4354-a2bb-881b27cd9704"
 		},
 		{
 			"name": "Ticket",
 			"item": [
 				{
 					"name": "getMenu",
-					"_postman_id": "327a94e1-a5ff-46d4-9869-3910a8186ac3",
+					"id": "327a94e1-a5ff-46d4-9869-3910a8186ac3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4362,7 +4289,7 @@
 							}
 						}
 					],
-					"_postman_id": "8331bc3c-f1b1-46c7-9fed-575934efb168",
+					"id": "8331bc3c-f1b1-46c7-9fed-575934efb168",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4383,8 +4310,7 @@
 									"value": "{{ticketId}}",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/ticket/close",
 						"description": "завершение тикета"
@@ -4412,7 +4338,7 @@
 							}
 						}
 					],
-					"_postman_id": "d030fe54-8a4c-44c4-85c2-c5527c612298",
+					"id": "d030fe54-8a4c-44c4-85c2-c5527c612298",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4451,7 +4377,7 @@
 							}
 						}
 					],
-					"_postman_id": "82e9b1aa-1322-4c08-8f2e-37cce55876d1",
+					"id": "82e9b1aa-1322-4c08-8f2e-37cce55876d1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4472,8 +4398,7 @@
 									"value": "5314",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/ticket/GetAnswers",
 						"description": "получить сообщения по тикету"
@@ -4507,7 +4432,7 @@
 							}
 						}
 					],
-					"_postman_id": "7585805b-579b-4c16-baa0-465eda79f290",
+					"id": "7585805b-579b-4c16-baa0-465eda79f290",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4547,15 +4472,14 @@
 									"description": "текст обращения",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/ticket/Add"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "3c8dad7e-aea9-41a3-860a-0f48fc2102b6"
+			"id": "3c8dad7e-aea9-41a3-860a-0f48fc2102b6"
 		},
 		{
 			"name": "Payment",
@@ -4581,7 +4505,7 @@
 							}
 						}
 					],
-					"_postman_id": "cfe3ad0e-0a41-4153-a220-4a1df1175468",
+					"id": "cfe3ad0e-0a41-4153-a220-4a1df1175468",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4602,8 +4526,7 @@
 									"value": "pay",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki2}}/eApis/app/payment/getCards",
 						"description": "Получить информацию о банковских картах"
@@ -4612,7 +4535,7 @@
 				},
 				{
 					"name": "deleteCard",
-					"_postman_id": "c6de7dda-3b4e-4674-8a84-2c185c7026a7",
+					"id": "c6de7dda-3b4e-4674-8a84-2c185c7026a7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4638,8 +4561,7 @@
 									"value": "4",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Payment/DeleteCard"
 					},
@@ -4647,7 +4569,7 @@
 				},
 				{
 					"name": "getTarifMap",
-					"_postman_id": "2eebf7f3-fade-43df-ae49-85faa1047708",
+					"id": "2eebf7f3-fade-43df-ae49-85faa1047708",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4666,7 +4588,7 @@
 				},
 				{
 					"name": "cashoutCancel",
-					"_postman_id": "66856080-2e4f-4fec-9793-16f0320fc8db",
+					"id": "66856080-2e4f-4fec-9793-16f0320fc8db",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4687,8 +4609,7 @@
 									"value": "489",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Payment/CashoutCancel"
 					},
@@ -4696,7 +4617,7 @@
 				},
 				{
 					"name": "GetHistoryPagination",
-					"_postman_id": "f13ad19d-4ab9-44c8-8b0b-44e920e72813",
+					"id": "f13ad19d-4ab9-44c8-8b0b-44e920e72813",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4722,8 +4643,7 @@
 									"value": "0",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki2}}/eApis/app/Payment/GetHistoryPagination"
 					},
@@ -4731,7 +4651,7 @@
 				},
 				{
 					"name": "Cashout",
-					"_postman_id": "5251c635-e0e1-40c8-b711-4e5d1d85cdc1",
+					"id": "5251c635-e0e1-40c8-b711-4e5d1d85cdc1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4762,8 +4682,7 @@
 									"value": "100",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": {
 							"raw": "{{peshkariki1}}/eApis/app/Payment/Cashout?",
@@ -4788,7 +4707,7 @@
 				},
 				{
 					"name": "Pay",
-					"_postman_id": "99522e91-ea90-4ad5-994b-d88c08105737",
+					"id": "99522e91-ea90-4ad5-994b-d88c08105737",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4814,22 +4733,21 @@
 									"value": "574",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Payment/Pay"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "382e2ee0-41cf-40cf-a9bd-274f42ac9e38"
+			"id": "382e2ee0-41cf-40cf-a9bd-274f42ac9e38"
 		},
 		{
 			"name": "Duty",
 			"item": [
 				{
 					"name": "routeList",
-					"_postman_id": "970e32c2-d53b-4db6-99f6-0609dfe1f85c",
+					"id": "970e32c2-d53b-4db6-99f6-0609dfe1f85c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4850,8 +4768,7 @@
 									"value": "2022-12-02",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/duty/GetTariffsByDate"
 					},
@@ -4859,7 +4776,7 @@
 				},
 				{
 					"name": "routeList Copy",
-					"_postman_id": "526116f0-6cec-4559-ad10-92a233c532e2",
+					"id": "526116f0-6cec-4559-ad10-92a233c532e2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4874,22 +4791,21 @@
 						"header": [],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {}
+							"formdata": []
 						},
 						"url": "{{peshkariki1}}/eApis/app/duty/routeList"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "9efc91a9-0e3c-4616-98ed-b01626f08d23"
+			"id": "9efc91a9-0e3c-4616-98ed-b01626f08d23"
 		},
 		{
 			"name": "CheckOnline",
 			"item": [
 				{
 					"name": "get",
-					"_postman_id": "ac0c84f6-3f6b-4159-8ca0-145be7b58d85",
+					"id": "ac0c84f6-3f6b-4159-8ca0-145be7b58d85",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4908,7 +4824,7 @@
 				},
 				{
 					"name": "AccessCheckOnline",
-					"_postman_id": "309855ca-ed56-4857-97ba-b49ec978a9c1",
+					"id": "309855ca-ed56-4857-97ba-b49ec978a9c1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4946,14 +4862,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "bf11b093-4ead-4f9b-b472-37e136b2259a"
+			"id": "bf11b093-4ead-4f9b-b472-37e136b2259a"
 		},
 		{
 			"name": "OrderTracking",
 			"item": [
 				{
 					"name": "SearchOrders",
-					"_postman_id": "9176cb45-a6c2-4f9a-9c2f-45ce584ad67b",
+					"id": "9176cb45-a6c2-4f9a-9c2f-45ce584ad67b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4976,22 +4892,21 @@
 									"value": "2335178",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/OrderTracking/SearchOrders"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "6faf804e-f6f0-4a33-a3a6-450a7b92da79"
+			"id": "6faf804e-f6f0-4a33-a3a6-450a7b92da79"
 		},
 		{
 			"name": "Crm",
 			"item": [
 				{
 					"name": "GetCouriersList",
-					"_postman_id": "9e9abf27-69ff-4991-bb2c-a5567c6bebbc",
+					"id": "9e9abf27-69ff-4991-bb2c-a5567c6bebbc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5010,7 +4925,7 @@
 				},
 				{
 					"name": "InviteCourier",
-					"_postman_id": "af7bb352-801d-434e-a573-0da5b776eac0",
+					"id": "af7bb352-801d-434e-a573-0da5b776eac0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5037,8 +4952,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/InviteCourier"
 					},
@@ -5046,7 +4960,7 @@
 				},
 				{
 					"name": "ConfirmInvite",
-					"_postman_id": "4818a691-71d6-413c-9769-67410df70e34",
+					"id": "4818a691-71d6-413c-9769-67410df70e34",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5072,8 +4986,7 @@
 									"value": "",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/ConfirmInvite"
 					},
@@ -5081,7 +4994,7 @@
 				},
 				{
 					"name": "DeleteCourier",
-					"_postman_id": "c8288b90-2f03-4281-b776-106f28fb44d4",
+					"id": "c8288b90-2f03-4281-b776-106f28fb44d4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5102,8 +5015,7 @@
 									"value": "33377656",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/DeleteCourier"
 					},
@@ -5111,7 +5023,7 @@
 				},
 				{
 					"name": "ChangeVisibleCommonStock",
-					"_postman_id": "b5d8ba11-fa7f-4f81-a5d7-07830fcb928a",
+					"id": "b5d8ba11-fa7f-4f81-a5d7-07830fcb928a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5137,8 +5049,7 @@
 									"value": "",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/ChangeVisibleCommonStock"
 					},
@@ -5146,7 +5057,7 @@
 				},
 				{
 					"name": "СhangeVisibleCourier",
-					"_postman_id": "f6738176-0079-44da-938d-9e2353bd3f8c",
+					"id": "f6738176-0079-44da-938d-9e2353bd3f8c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5167,8 +5078,7 @@
 									"value": "0",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/СhangeVisibleCourier"
 					},
@@ -5176,7 +5086,7 @@
 				},
 				{
 					"name": "DeleteShop",
-					"_postman_id": "0fb126b4-0808-40ec-a772-12473f7646d4",
+					"id": "0fb126b4-0808-40ec-a772-12473f7646d4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5197,8 +5107,7 @@
 									"value": "5",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/DeleteShop"
 					},
@@ -5206,7 +5115,7 @@
 				},
 				{
 					"name": "GetShopsList",
-					"_postman_id": "3d75067e-28d2-4d01-b3f4-96ed950e6db4",
+					"id": "3d75067e-28d2-4d01-b3f4-96ed950e6db4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5221,22 +5130,21 @@
 						"header": [],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {}
+							"formdata": []
 						},
 						"url": "{{peshkariki1}}/eApis/app/Crm/GetShopsList"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "e9f6013e-c493-4276-9013-b8216df3230b"
+			"id": "e9f6013e-c493-4276-9013-b8216df3230b"
 		},
 		{
 			"name": "New Folder",
 			"item": [
 				{
 					"name": "New Request",
-					"_postman_id": "137e3a84-372c-4b74-866b-31322d4c7443",
+					"id": "137e3a84-372c-4b74-866b-31322d4c7443",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5257,19 +5165,18 @@
 									"value": "83",
 									"type": "text"
 								}
-							],
-							"options": {}
+							]
 						},
 						"url": "{{peshkarikiAPI}}/eApis/frontend/AddressBook/GetAll"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "8b177fe6-0276-4a8e-bd9f-5c7f3b95e174"
+			"id": "8b177fe6-0276-4a8e-bd9f-5c7f3b95e174"
 		},
 		{
 			"name": "test",
-			"_postman_id": "5d2aff63-74f9-415d-9552-734f56cf8a17",
+			"id": "5d2aff63-74f9-415d-9552-734f56cf8a17",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"content-length": true,
@@ -5303,8 +5210,7 @@
 				],
 				"body": {
 					"mode": "formdata",
-					"formdata": [],
-					"options": {}
+					"formdata": []
 				},
 				"url": "{{peshkariki1}}/eApis/app/user/GetStats"
 			},
