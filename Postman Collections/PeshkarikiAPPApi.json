@@ -3476,6 +3476,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "9c398c66-c57e-4929-aa8b-cfec0055a0c6",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -3486,8 +3487,7 @@
 									"    pm.expect(jsonData.success).to.eql(true);",
 									"});"
 								],
-								"type": "text/javascript",
-								"id": "9c398c66-c57e-4929-aa8b-cfec0055a0c6"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3499,7 +3499,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{token}}"
+								"token": "{{tokenAPP2}}"
 							}
 						},
 						"method": "POST",
@@ -3514,7 +3514,7 @@
 								}
 							]
 						},
-						"url": "{{peshkariki1}}/eApis/app/order/getOrder"
+						"url": "{{peshkarikiAPI}}/eApis/app/order/getOrder"
 					},
 					"response": []
 				},
