@@ -3320,6 +3320,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "26a8e829-c6ff-4123-9407-3705146f0087",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -3330,8 +3331,7 @@
 									"    pm.expect(jsonData.success).to.eql(true);",
 									"});"
 								],
-								"type": "text/javascript",
-								"id": "26a8e829-c6ff-4123-9407-3705146f0087"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3343,7 +3343,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{token}}"
+								"token": "{{tokenAPP2}}"
 							}
 						},
 						"method": "POST",
@@ -3377,7 +3377,7 @@
 								}
 							]
 						},
-						"url": "{{peshkariki1}}/eApis/app/order/SavePhoto"
+						"url": "{{peshkarikiAPI}}/eApis/app/order/SavePhoto"
 					},
 					"response": []
 				},
