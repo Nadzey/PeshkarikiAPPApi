@@ -3440,11 +3440,11 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "818b922d-1e28-4e67-a712-c95696f2a1be",
 								"exec": [
 									""
 								],
-								"type": "text/javascript",
-								"id": "818b922d-1e28-4e67-a712-c95696f2a1be"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3456,7 +3456,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{token}}"
+								"token": "{{tokenAPP2}}"
 							}
 						},
 						"method": "POST",
@@ -3465,7 +3465,7 @@
 							"mode": "formdata",
 							"formdata": []
 						},
-						"url": "{{peshkariki2}}/eApis/app/order/GetMyOrders",
+						"url": "{{peshkarikiAPI}}/eApis/app/order/GetMyOrders",
 						"description": "получить мои заказы"
 					},
 					"response": []
