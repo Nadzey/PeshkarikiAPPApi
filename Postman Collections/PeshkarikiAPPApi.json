@@ -3295,7 +3295,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{token}}"
+								"token": "{{tokenAPP2}}"
 							}
 						},
 						"method": "POST",
@@ -3310,7 +3310,7 @@
 								}
 							]
 						},
-						"url": "{{peshkariki1}}/eApis/app/order/archiveOrder"
+						"url": "{{peshkarikiAPI}}/eApis/app/order/archiveOrder"
 					},
 					"response": []
 				},
